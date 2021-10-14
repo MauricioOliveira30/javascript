@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset="UTF-8">
+        <title>País</title>
+    </head>
+    <body>
+        <h1>Nacionalidade</h1>
+            País:<input type="string" name="txtnacional" id="txtnacional">
+            <input type="button" value="Nação" onclick="nação()">
+            <div id="res">
+
+            </div>
+            <script>
+                function nação(){
+                var txtn=window.document.querySelector('input#txtnacional')
+                var res=window.document.querySelector('div#res')
+                var nação=txtn.value
+                res.innerHTML=`<p>Vivendo em <strong>${nação}</strong></p>`
+                if (nação=="Brasil"){
+                res.innerHTML+=`<p>Você é <strong>Brasileiro</strong></p>`
+                }else{
+                    res.innerHTML+=`<p><strong>Você é Estrangeiro</strong></p>`
+                }
+            res.innerHTML+=`Que belo país você vive!!!`
+            }
+            </script>
+        </h1>
+    </body>
+</html>
+
